@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Plan Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>Welcome to the Workout Plan Generator</h1>
-    <!-- Add more content here -->
+    <div class="perfect-body-section">
+        <div class="heading">
+            <h1>BUILD YOUR PERFECT BODY</h1>
+            <p class="subtitle">ACCORDING TO YOUR AGE AND BMI</p>
+        </div>
+        <div class="age-groups">
+            <a href="{{ url_for('body_type', age_group='18-29') }}" class="age-group">
+                <div class="image-placeholder"></div>
+                <p class="age-range">Age: 18-29</p>
+            </a>
+            <a href="{{ url_for('body_type', age_group='30-39') }}" class="age-group">
+                <div class="image-placeholder"></div>
+                <p class="age-range">Age: 30-39</p>
+            </a>
+            <a href="{{ url_for('body_type', age_group='40-49') }}" class="age-group">
+                <div class="image-placeholder"></div>
+                <p class="age-range">Age: 40-49</p>
+            </a>
+            <a href="{{ url_for('body_type', age_group='50+') }}" class="age-group">
+                <div class="image-placeholder"></div>
+                <p class="age-range">Age: 50+</p>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
