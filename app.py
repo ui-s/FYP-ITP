@@ -14,10 +14,16 @@ def body_type(age_group):
 def choose_goal(age_group, body_type):
     return render_template('choose_goal.html', age_group=age_group, body_type=body_type)
 
-@app.route('/workout-plan/<age_group>/<body_type>/<goal>')
-def workout_plan(age_group, body_type, goal):
-    # This is where you'll generate the workout plan based on age, body type, and goal
-    return f"Workout plan for age group {age_group}, body type {body_type}, and goal {goal}"
+@app.route('/choose-desired-body/<age_group>/<body_type>/<goal>')
+def choose_desired_body(age_group, body_type, goal):
+    return render_template('choose_desired_body.html', age_group=age_group, body_type=body_type, goal=goal)
+
+@app.route('/workout-plan/<age_group>/<body_type>/<goal>/<desired_body>')
+def workout_plan(age_group, body_type, goal, desired_body):
+    # This is where you'll generate the workout plan based on all parameters
+    return f"Workout plan for age group {age_group}, body type {body_type}, goal {goal}, and desired body {desired_body}"
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    

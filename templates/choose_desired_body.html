@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Desired Body</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/choose_desired_body.css') }}">
+</head>
+<body>
+    <div class="desired-body-section">
+        <p class="goal-summary">Ok, so your goal is to {{ goal.replace('_', ' ').title() }}</p>
+        <h1>Choose the body you want</h1>
+        <div class="body-types">
+            <a href="{{ url_for('workout_plan', age_group=age_group, body_type=body_type, goal=goal, desired_body='athlete') }}" class="body-type">
+                <span>Athlete</span>
+                <img src="{{ url_for('static', filename='images/athlete.jpg') }}" alt="Athlete body type">
+            </a>
+            <a href="{{ url_for('workout_plan', age_group=age_group, body_type=body_type, goal=goal, desired_body='hero') }}" class="body-type">
+                <span>Hero</span>
+                <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Hero body type">
+            </a>
+            <a href="{{ url_for('workout_plan', age_group=age_group, body_type=body_type, goal=goal, desired_body='bodybuilder') }}" class="body-type">
+                <span>Bodybuilder</span>
+                <img src="{{ url_for('static', filename='images/bodybuilder.jpg') }}" alt="Bodybuilder body type">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

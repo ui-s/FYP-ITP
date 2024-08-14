@@ -10,19 +10,19 @@
     <div class="goal-section">
         <h1>Choose your goal</h1>
         <div class="goals">
-            <a href="{{ url_for('workout_plan', age_group=age_group, body_type=body_type, goal='lose_weight') }}" class="goal">
+            <a href="{{ url_for('choose_desired_body', age_group=age_group, body_type=body_type, goal='lose_weight') }}" class="goal">
                 <div class="goal-content">
                     <span>Lose Weight</span>
                     <img src="{{ url_for('static', filename='images/lose_weight.jpg') }}" alt="Lose Weight">
                 </div>
             </a>
-            <a href="{{ url_for('workout_plan', age_group=age_group, body_type=body_type, goal='gain_muscle') }}" class="goal">
+            <a href="{{ url_for('choose_desired_body', age_group=age_group, body_type=body_type, goal='gain_muscle') }}" class="goal">
                 <div class="goal-content">
                     <span>Gain Muscle Mass</span>
                     <img src="{{ url_for('static', filename='images/gain_muscle.jpg') }}" alt="Gain Muscle Mass">
                 </div>
             </a>
-            <a href="{{ url_for('workout_plan', age_group=age_group, body_type=body_type, goal='get_shredded') }}" class="goal">
+            <a href="{{ url_for('choose_desired_body', age_group=age_group, body_type=body_type, goal='get_shredded') }}" class="goal">
                 <div class="goal-content">
                     <span>Get Shredded</span>
                     <img src="{{ url_for('static', filename='images/get_shredded.jpg') }}" alt="Get Shredded">
