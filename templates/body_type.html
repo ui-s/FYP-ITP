@@ -11,15 +11,15 @@
         <h1>Choose your body type</h1>
         <p class="subtitle">For age group: {{ age_group }}</p>
         <div class="body-types">
-            <a href="{{ url_for('workout_plan', age_group=age_group, body_type='slim') }}" class="body-type">
+            <a href="{{ url_for('choose_goal', age_group=age_group, body_type='slim') }}" class="body-type">
                 <img src="{{ url_for('static', filename='images/slim.jpg') }}" alt="Slim body type">
                 <p>Slim</p>
             </a>
-            <a href="{{ url_for('workout_plan', age_group=age_group, body_type='average') }}" class="body-type">
+            <a href="{{ url_for('choose_goal', age_group=age_group, body_type='average') }}" class="body-type">
                 <img src="{{ url_for('static', filename='images/average.jpg') }}" alt="Average body type">
                 <p>Average</p>
             </a>
-            <a href="{{ url_for('workout_plan', age_group=age_group, body_type='heavy') }}" class="body-type">
+            <a href="{{ url_for('choose_goal', age_group=age_group, body_type='heavy') }}" class="body-type">
                 <img src="{{ url_for('static', filename='images/heavy.jpg') }}" alt="Heavy body type">
                 <p>Heavy</p>
             </a>
